@@ -22,14 +22,13 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
-    '@ng-mfe/shared/data-access-user',
   ],
   workspaceRootPath
 );
 
 module.exports = {
   output: {
-    uniqueName: 'dashboard',
+    uniqueName: 'footer',
     publicPath: 'auto',
   },
   optimization: {
@@ -45,9 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        login: 'http://localhost:4201/remoteEntry.js',
-        footer: 'http://localhost:4202/remoteEntry.js',
+      name: 'footer',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './FooterComponentComponent': './apps/footer/src/app/footer-component/footer-component.component.ts',
       },
       shared: share({
         '@angular/core': {
