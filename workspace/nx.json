@@ -1,0 +1,20 @@
+{
+  "implicitDependencies": {
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    ".eslintrc.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "workspace",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "host": { "tags": [] },
+    "host-e2e": { "tags": [], "implicitDependencies": ["host"] },
+    "footer": { "tags": [] },
+    "footer-e2e": { "tags": [], "implicitDependencies": ["footer"] }
+  }
+}
