@@ -1,0 +1,34 @@
+{
+  "root": "apps/footer-e2e",
+  "sourceRoot": "apps/footer-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/footer-e2e/cypress.json",
+        "devServerTarget": "footer:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "footer:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/footer-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "footer"
+  ]
+}

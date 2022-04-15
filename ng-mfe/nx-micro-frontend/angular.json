@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "footer": "apps/footer",
+    "footer-e2e": "apps/footer-e2e",
+    "host": "apps/host",
+    "host-e2e": "apps/host-e2e"
+  }
+}
