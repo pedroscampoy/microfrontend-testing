@@ -47,7 +47,7 @@ module.exports = {
       name: 'footer',
       filename: 'remoteEntry.js',
       exposes: {
-        './FooterComponentComponent': './apps/footer/src/app/footer-component/footer-component.component.ts',
+        './FooterComponent': './apps/footer/src/app/footer-component/footer-component.component.ts',
       },
       shared: share({
         '@angular/core': {
