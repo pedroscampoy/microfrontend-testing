@@ -10,12 +10,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponentHostComponent } from './footer-component-host/footer-component-host.component';
 
 @NgModule({
   declarations: [AppComponent, FooterComponentHostComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
