@@ -8,12 +8,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, FooterComponentComponent],
+  declarations: [AppComponent, FooterComponentComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),

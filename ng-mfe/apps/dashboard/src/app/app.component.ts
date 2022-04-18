@@ -17,14 +17,14 @@ export class AppComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
-    this.isLoggedIn$
-      .pipe(distinctUntilChanged())
-      .subscribe(async (loggedIn) => {
-        if (!loggedIn) {
-          this.router.navigateByUrl('login');
-        } else {
-          this.router.navigateByUrl('');
-        }
-      });
+    // this.isLoggedIn$
+    //   .pipe(distinctUntilChanged())
+    //   .subscribe(async (loggedIn) => {
+    //     if (!loggedIn) {
+    //       this.router.navigateByUrl('login');
+    //     } else {
+    //       this.router.navigateByUrl('');
+    //     }
+    //   });
   }
 }

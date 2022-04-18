@@ -49,6 +49,8 @@ module.exports = {
       remotes: {
         login: 'http://localhost:4201/remoteEntry.js',
         footer: 'http://localhost:4202/remoteEntry.js',
+        mf1: 'http://localhost:4203/remoteEntry.js',
+        mf2: 'http://localhost:4204/remoteEntry.js',
       },
       shared: share({
         '@angular/core': {

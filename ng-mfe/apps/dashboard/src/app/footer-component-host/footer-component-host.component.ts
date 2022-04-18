@@ -1,9 +1,7 @@
 import {
   Component,
-  // ComponentFactoryResolver,
   ViewContainerRef,
   ComponentRef,
-  // AfterViewInit,
   OnInit,
 } from '@angular/core';
 import { loadRemoteModule } from '@angular-architects/module-federation';
@@ -16,16 +14,15 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 export class FooterComponentHostComponent implements OnInit {
 
   constructor(
-    // private cfr: ComponentFactoryResolver,
     private vcref: ViewContainerRef
   ) {}
 
   async ngOnInit() {
     const { FooterComponentComponent } = await loadRemoteModule({
       remoteEntry: 'http://localhost:4202/remoteEntry.js',
-      // remoteName: 'footer',
       exposedModule: './FooterComponent',
       type: 'module',
+      // remoteName: 'footer',
     });
     const componentRef: ComponentRef<{
       year: number;

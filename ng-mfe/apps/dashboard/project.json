@@ -101,7 +101,13 @@
     "serve-mfe": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "commands": ["nx serve footer", "nx serve login", "nx serve dashboard"]
+        "commands": [
+          "nx serve mf2",
+          "nx serve mf1",
+          "nx serve footer",
+          "nx serve login",
+          "nx serve dashboard"
+        ]
       }
     }
   },
