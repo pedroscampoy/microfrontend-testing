@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponentComponent implements OnInit {
   year = 2021;
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 

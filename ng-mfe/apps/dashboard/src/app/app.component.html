@@ -1,57 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <h1>POKEXPLORER</h1>
+    <h2>MFE TESTING</h2>
     <span class="menu-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <button mat-button [matMenuTriggerFor]="afterMenu">Data</button>
-        <mat-menu #afterMenu="matMenu" xPosition="after" [hasBackdrop]="false">
-          <button [routerLink]="'/chord'" mat-menu-item>Data circle</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
-      <a mat-button [routerLink]="'/pokedex'"> Pokedex </a>
-      <button mat-button [matMenuTriggerFor]="d3Examples">D3 Examples</button>
-        <mat-menu #d3Examples="matMenu" xPosition="after" [hasBackdrop]="false">
-          <button [routerLink]="'/test'" mat-menu-item>Test</button>
-          <button [routerLink]="'/project2'" mat-menu-item>Project2</button>
-          <button [routerLink]="'/project3'" mat-menu-item>Project3</button>
-        </mat-menu>
-      <a mat-button [routerLink]="'/user'"> User </a>
-
+      <a mat-button [routerLink]="''"> HOME </a>
+      <a mat-button [routerLink]="'/mf1'"> MF1 </a>
+      <a mat-button [routerLink]="'/mf2'"> MF2 </a>
+      <a mat-button [routerLink]="'/login'"> Login </a>
     </div>
   </mat-toolbar-row>
-
 </mat-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list>
-      <a mat-list-item [matMenuTriggerFor]="afterMenu">Data</a>
-        <mat-menu #afterMenu="matMenu" xPosition="after">
-          <button [routerLink]="'/chord'" mat-menu-item>Data circle</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
-      <a mat-list-item [routerLink]="'/pokedex'" (click)="sidenav.close()"> Pokedex </a>
-      <button mat-button [matMenuTriggerFor]="d3Examples">D3 Examples</button>
-        <mat-menu #d3Examples="matMenu" xPosition="after" [hasBackdrop]="false">
-          <button [routerLink]="'/test'" mat-menu-item>Test</button>
-          <button [routerLink]="'/project2'" mat-menu-item>Project2</button>
-          <button [routerLink]="'/project3'" mat-menu-item>Project3</button>
-        </mat-menu>
-      <a mat-list-item [routerLink]="'/user'" (click)="sidenav.close()">User </a>
-      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh;">
-
+    <div class='router-wrapper' style="height: 88vh;">
       <router-outlet></router-outlet>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
 <div class="dashboard-nav">Admin Dashboard</div>
     <!-- <div *ngIf="isLoggedIn$ | async; else signIn">
       You are authenticated so you can see this content.
