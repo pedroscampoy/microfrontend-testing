@@ -3,10 +3,11 @@
     <h2>MFE TESTING</h2>
     <span class="menu-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button [routerLink]="''"> HOME </a>
-      <a mat-button [routerLink]="'/mf1'"> MF1 </a>
-      <a mat-button [routerLink]="'/mf2'"> MF2 </a>
-      <a mat-button [routerLink]="'/login'"> Login </a>
+      <button mat-button [routerLink]="''"> HOME </button>
+      <button mat-button [routerLink]="'/mf1'"> MF1 </button>
+      <button [disabled]="(isLoggedIn$ | async) === false" [routerLink]="'/mf2'"> MF2 </button>
+      <button mat-button [routerLink]="'/mf3'"> MF3 </button>
+      <button mat-button [routerLink]="'/login'"> Login </button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

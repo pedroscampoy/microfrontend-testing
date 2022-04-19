@@ -12,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponentHostComponent } from './footer-component-host/footer-component-host.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 
 @NgModule({
   declarations: [AppComponent, FooterComponentHostComponent],
@@ -35,13 +36,34 @@ import { MatSliderModule } from '@angular/material/slider';
         {
           path: 'mf1',
           loadChildren: () =>
-            import('mf1/Module').then((m) => m.RemoteEntryModule),
+            loadRemoteModule({
+                type: 'module',
+                remoteEntry: 'http://localhost:4203/remoteEntry.js',
+                exposedModule: './Module'
+            })
+            .then(m => m.RemoteEntryModule)
         },
         {
           path: 'mf2',
           loadChildren: () =>
             import('mf2/Module').then((m) => m.RemoteEntryModule),
         },
+        {
+          path: 'mf3',
+          loadChildren: () =>
+            import('mf3/Module').then((m) => m.RemoteEntryModule),
+        },
+        // {
+        //   path: 'mf3',
+        //   loadChildren: () =>
+        //     loadRemoteModule({
+        //         type: "script",
+        //         remoteEntry: 'http://localhost:4205/remoteEntry.js',
+        //         exposedModule: './Module',
+        //         remoteName: 'mf3'
+        //     })
+        //     .then(m => m.RemoteEntryModule)
+        // },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
