@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h2>MFE TESTING</h2>
+    <span class="menu-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button [routerLink]="''"> HOME </a>
+      <a mat-button [routerLink]="'/mf1'"> MF1 </a>
+      <a mat-button [routerLink]="'/mf2'"> MF2 </a>
+      <a mat-button [routerLink]="'/login'"> Login </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+    <div class='router-wrapper' style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+<div class="dashboard-nav">Admin Dashboard</div>
+    <!-- <div *ngIf="isLoggedIn$ | async; else signIn">
+      You are authenticated so you can see this content.
+    </div> -->
+<!-- <ng-template #signIn><router-outlet></router-outlet></ng-template> -->
+<ng-mfe-footer-component-host></ng-mfe-footer-component-host>
