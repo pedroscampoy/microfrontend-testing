@@ -9,13 +9,14 @@
       <button mat-button [routerLink]="'/mf3'"> MF3 </button>
       <button mat-button [routerLink]="'/login'"> Login </button>
     </div>
+    <span class="menu-spacer"></span>
+    <h2>Admin Dashboard</h2>
   </mat-toolbar-row>
 </mat-toolbar>
     <div class='router-wrapper' style="height: 88vh;">
       <router-outlet></router-outlet>
     </div>
-<div class="dashboard-nav">Admin Dashboard</div>
-    <!-- <div *ngIf="isLoggedIn$ | async; else signIn">
+<!-- <div *ngIf="isLoggedIn$ | async; else signIn">
       You are authenticated so you can see this content.
     </div> -->
 <!-- <ng-template #signIn><router-outlet></router-outlet></ng-template> -->

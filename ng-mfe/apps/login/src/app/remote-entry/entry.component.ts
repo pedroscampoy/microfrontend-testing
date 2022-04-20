@@ -26,6 +26,7 @@ import { UserService } from '@ng-mfe/shared/data-access-user';
         border: 2px dashed black;
         padding: 8px;
         margin: 0 auto;
+        margin-top: 2rem;
       }
       .login-form {
         display: flex;

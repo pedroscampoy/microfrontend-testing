@@ -10,7 +10,6 @@
     "mf1": "apps/mf1",
     "mf1-e2e": "apps/mf1-e2e",
     "mf2": "apps/mf2",
-    "mf2-e2e": "apps/mf2-e2e",
     "shared-data-access-user": "libs/shared/data-access-user"
   }
 }

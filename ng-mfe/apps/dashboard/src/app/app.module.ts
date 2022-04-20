@@ -13,9 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponentHostComponent } from './footer-component-host/footer-component-host.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { loadRemoteModule } from '@angular-architects/module-federation';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponentHostComponent],
+  declarations: [AppComponent, FooterComponentHostComponent, HomeComponent],
   imports: [
     MatSliderModule,
     BrowserModule,
@@ -29,6 +30,10 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
     RouterModule.forRoot(
       [
         {
+          path: '',
+          component: HomeComponent,
+        },
+        {
           path: 'login',
           loadChildren: () =>
             import('login/Module').then((m) => m.RemoteEntryModule),
@@ -37,33 +42,30 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
           path: 'mf1',
           loadChildren: () =>
             loadRemoteModule({
-                type: 'module',
-                remoteEntry: 'http://localhost:4203/remoteEntry.js',
-                exposedModule: './Module'
-            })
-            .then(m => m.RemoteEntryModule)
+              type: 'module',
+              remoteEntry: 'http://localhost:4203/remoteEntry.js',
+              exposedModule: './Module',
+            }).then((m) => m.RemoteEntryModule),
         },
         {
           path: 'mf2',
           loadChildren: () =>
             import('mf2/Module').then((m) => m.RemoteEntryModule),
         },
-        {
-          path: 'mf3',
-          loadChildren: () =>
-            import('mf3/Module').then((m) => m.RemoteEntryModule),
-        },
         // {
         //   path: 'mf3',
         //   loadChildren: () =>
-        //     loadRemoteModule({
-        //         type: "script",
-        //         remoteEntry: 'http://localhost:4205/remoteEntry.js',
-        //         exposedModule: './Module',
-        //         remoteName: 'mf3'
-        //     })
-        //     .then(m => m.RemoteEntryModule)
+        //     import('mf3/Module').then((m) => m.RemoteEntryModule),
         // },
+        {
+          path: 'mf3',
+          loadChildren: () =>
+            loadRemoteModule({
+              type: 'module',
+              remoteEntry: 'http://localhost:4205/remoteEntry.js',
+              exposedModule: './Module',
+            }).then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
