@@ -1,5 +1,6 @@
 {
   "projectType": "library",
+  "root": "libs/shared/data-access-user",
   "sourceRoot": "libs/shared/data-access-user/src",
   "prefix": "workspace",
   "targets": {
@@ -15,8 +16,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/shared/data-access-user/**/*.ts",
-          "libs/shared/data-access-user/**/*.html"
+          "libs/shared/data-access-user/src/**/*.ts",
+          "libs/shared/data-access-user/src/**/*.html"
         ]
       }
     }

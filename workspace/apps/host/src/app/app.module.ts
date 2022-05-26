@@ -42,6 +42,14 @@ import { FooterHostComponent } from './footer-host/footer-host.component';
           loadChildren: () =>
             import('mf3/Module').then((m) => m.RemoteEntryModule),
         },
+        {path: 'mf4',
+          loadChildren: () =>
+            loadRemoteModule({
+              type: 'module',
+              remoteEntry: 'http://localhost:4205/remoteEntry.js',
+              exposedModule: './Module',
+            }).then((m) => m.RemoteEntryModule),
+        }
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
