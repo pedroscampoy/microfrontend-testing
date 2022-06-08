@@ -12,8 +12,8 @@ POC of a monorepo Angular worksapce with several projects to practice:
 
 ### Commands
 
-Create empty workspace
+ - Create empty workspace
 ```
 npx create-nx-workspace@latest workspace --preset=empty
-´´´
+```
 
