@@ -46,7 +46,7 @@ import { FooterHostComponent } from './footer-host/footer-host.component';
           loadChildren: () =>
             loadRemoteModule({
               type: 'module',
-              remoteEntry: 'http://localhost:4205/remoteEntry.js',
+              remoteEntry: 'http://localhost:4205/remoteEntry.mjs',
               exposedModule: './Module',
             }).then((m) => m.RemoteEntryModule),
         }
