@@ -4,16 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    HomeComponent,
+    HeaderComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       [
         {
           path: '',
-          component: NxWelcomeComponent,
+          component: HomeComponent,
         },
         {
           path: 'mf1',
