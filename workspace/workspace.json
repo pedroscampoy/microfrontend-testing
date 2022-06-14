@@ -1,5 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "host": "apps/host",
+    "mf1": "apps/mf1",
+    "mf2": "apps/mf2",
+    "mf3": "apps/mf3"
+  }
 }

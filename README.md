@@ -18,6 +18,13 @@ npx create-nx-workspace@latest workspace --preset=empty
 ```
  - Install packages
  ```
- npm i --save-dev @nrwl/angular @angular-architects/module-federation
- npm i --save bootstrap
+ npm i --save-dev @nrwl/angular
+ npm i --save bootstrap @angular-architects/module-federation
  ```
+- Create projects
+```
+nx g @nrwl/angular:host host --e2eTestRunner=none
+nx g @nrwl/angular:remote mf1 --host=host --e2eTestRunner=none
+nx g @nrwl/angular:remote mf2 --host=host --e2eTestRunner=none
+nx g @nrwl/angular:remote mf3 --host=host --e2eTestRunner=none
+```
