@@ -5,8 +5,8 @@ POC of a monorepo Angular worksapce with several projects to practice:
 - [x] Angular + nx
 - [x] Angular + Module Federation
 - [x] Micro Frontend architecture
-- [ ] Import remote modules
-- [ ] Import remote components
+- [x] Import remote modules
+- [x] Import remote components
 - [ ] Share state
 
 
@@ -27,4 +27,15 @@ nx g @nrwl/angular:host host --e2eTestRunner=none
 nx g @nrwl/angular:remote mf1 --host=host --e2eTestRunner=none
 nx g @nrwl/angular:remote mf2 --host=host --e2eTestRunner=none
 nx g @nrwl/angular:remote mf3 --host=host --e2eTestRunner=none
+```
+- Create components
+```
+nx g @nrwl/angular:component home --project host
+nx g @nrwl/angular:component header --project host
+nx g @nrwl/angular:component home --project mf2
+nx g @nrwl/angular:component footer --project mf2
+```
+- Create receiver component
+```
+nx g @nrwl/angular:component footer-host --project host
 ```
