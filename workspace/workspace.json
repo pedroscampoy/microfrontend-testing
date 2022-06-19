@@ -5,6 +5,7 @@
     "host": "apps/host",
     "mf1": "apps/mf1",
     "mf2": "apps/mf2",
-    "mf3": "apps/mf3"
+    "mf3": "apps/mf3",
+    "shared-data-access-user": "libs/shared/data-access-user"
   }
 }

@@ -6,6 +6,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterHostComponent } from './footer-host/footer-host.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
     NxWelcomeComponent,
     HomeComponent,
     HeaderComponent,
+    FooterHostComponent,
   ],
   imports: [
     BrowserModule,
