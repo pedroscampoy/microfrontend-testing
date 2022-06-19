@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterHostComponent } from './footer-host/footer-host.component';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,14 @@ import { FooterHostComponent } from './footer-host/footer-host.component';
           path: 'mf3',
           loadChildren: () =>
             import('mf3/Module').then((m) => m.RemoteEntryModule),
+        },
+        {path: 'mf4',
+          loadChildren: () =>
+            loadRemoteModule({
+              type: 'module',
+              remoteEntry: 'http://localhost:4205/remoteEntry.mjs',
+              exposedModule: './Module',
+            }).then((m) => m.RemoteEntryModule),
         },
       ],
       { initialNavigation: 'enabledBlocking' }

@@ -8,6 +8,7 @@ POC of a monorepo Angular worksapce with several projects to practice:
 - [x] Import remote modules
 - [x] Import remote components
 - [x] Share state
+- [x] Import remote repository
 
 
 ### Commands
