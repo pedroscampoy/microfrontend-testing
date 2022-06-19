@@ -7,7 +7,7 @@ POC of a monorepo Angular worksapce with several projects to practice:
 - [x] Micro Frontend architecture
 - [x] Import remote modules
 - [x] Import remote components
-- [ ] Share state
+- [x] Share state
 
 
 ### Commands
@@ -39,3 +39,9 @@ nx g @nrwl/angular:component footer --project mf2
 ```
 nx g @nrwl/angular:component footer-host --project host
 ```
+- Create library and service
+```
+nx g @nrwl/angular:lib shared/data-access-user
+nx g @nrwl/angular:service user --project=shared-data-access-user
+```
+add "export * from './lib/user.service';" to \microfrontend-testing\workspace\libs\shared\data-access-user\src\index.ts

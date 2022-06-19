@@ -9,9 +9,9 @@
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" name="password" [(ngModel)]="password" />
       </div>
-      <button type="submit" class="btn btn-primary">Login</button> <!--*ngIf="(isLoggedIn$ | async) === false" -->
-      <!-- <button type="submit" class="btn btn-primary" *ngIf="isLoggedIn$ | async" (click)="logout()">Logout</button> -->
+      <button type="submit" class="btn btn-primary" *ngIf="(isLoggedIn$ | async) === false">Login</button>
+      <button type="submit" class="btn btn-primary" *ngIf="isLoggedIn$ | async" (click)="logout()">Logout</button>
     </form>
-    <!-- <div class="my-4" *ngIf="isLoggedIn$ | async">User is logged in!</div> -->
+    <div class="my-4" *ngIf="isLoggedIn$ | async">User is logged in!</div>
   </div>
 </div>
