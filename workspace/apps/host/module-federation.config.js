@@ -1,4 +1,4 @@
 module.exports = {
   name: 'host',
-  remotes: [],
+  remotes: ['mf1', 'mf2', 'mf3'],
 };
