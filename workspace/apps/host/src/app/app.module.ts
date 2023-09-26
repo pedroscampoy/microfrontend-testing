@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { loadRemoteModule } from '@angular-architects/module-federation';
 import { FooterHostComponent } from './footer-host/footer-host.component';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NxWelcomeComponent,
     HomeComponent,
     HeaderComponent,
     FooterHostComponent,
@@ -26,11 +28,7 @@ import { FooterHostComponent } from './footer-host/footer-host.component';
         {
           path: 'mf1',
           loadChildren: () =>
-            loadRemoteModule({
-              type: 'module',
-              remoteEntry: 'http://localhost:4201/remoteEntry.mjs',
-              exposedModule: './Module',
-            }).then((m) => m.RemoteEntryModule),
+            import('mf1/Module').then((m) => m.RemoteEntryModule),
         },
         {
           path: 'mf2',
@@ -49,7 +47,7 @@ import { FooterHostComponent } from './footer-host/footer-host.component';
               remoteEntry: 'http://localhost:4205/remoteEntry.mjs',
               exposedModule: './Module',
             }).then((m) => m.RemoteEntryModule),
-        }
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),

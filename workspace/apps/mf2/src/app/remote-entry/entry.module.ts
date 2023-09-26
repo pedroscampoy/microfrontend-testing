@@ -7,7 +7,9 @@ import { FooterComponent } from '../footer/footer.component';
 import { HomeComponent } from '../home/home.component';
 
 @NgModule({
-  declarations: [RemoteEntryComponent, FooterComponent, HomeComponent],
+  declarations: [RemoteEntryComponent,
+    FooterComponent,
+    HomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([

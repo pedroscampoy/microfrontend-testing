@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="''">Home</a>
+    <a class="navbar-brand active" [routerLink]="''">Home</a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page"  [ngClass]="{disabled : (isLoggedIn$ | async) === false }" [routerLink]="'/mf1'">MF1</a>
+        <a class="nav-link" aria-current="page" [routerLink]="'/mf1'" [ngClass]="{disabled : (isLoggedIn$ | async) === false }" >MF1</a>
         <a class="nav-link" [routerLink]="'/mf2'">MF2</a>
         <a class="nav-link" [routerLink]="'/mf3'">Login</a>
         <a class="nav-link" [routerLink]="'/mf4'">Remote repo</a>
@@ -11,4 +11,3 @@
     </div>
   </div>
 </nav>
-

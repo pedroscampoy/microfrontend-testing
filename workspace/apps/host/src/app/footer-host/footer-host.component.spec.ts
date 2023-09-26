@@ -10,9 +10,7 @@ describe('FooterHostComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [FooterHostComponent],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(FooterHostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

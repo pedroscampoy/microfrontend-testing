@@ -3,7 +3,6 @@
   "version": 2,
   "projects": {
     "host": "apps/host",
-    "host-e2e": "apps/host-e2e",
     "mf1": "apps/mf1",
     "mf2": "apps/mf2",
     "mf3": "apps/mf3",

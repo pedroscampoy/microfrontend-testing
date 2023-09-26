@@ -1,4 +1,4 @@
-import { Component, ComponentRef, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ComponentRef } from '@angular/core';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 
 
